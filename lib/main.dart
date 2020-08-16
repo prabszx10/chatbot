@@ -34,18 +34,24 @@ class _MyHomePageState extends State<MyHomePage> {
   final GlobalKey<AnimatedListState> _listKey = GlobalKey();
   List<String> _data = [];
   static const String BOT_URL =
-      "https://supercodebot.herokuapp.com"; // replace with server address
+      "https://chatbot-covid-api.herokuapp.com/bot"; // replace with server address
   TextEditingController _queryController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+//        leading: Image.asset('images/logoapp.png'),
         title: Text("Covid-19 Chatbot"),
       ),
 
       body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage("images/chatbg.png")
+                , fit: BoxFit.cover)
+        ),
         padding: EdgeInsets.only(top: 15),
+
         child: Column(   
           children: [
             Center(
@@ -161,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
               child: Bubble(
                 child: Text(item.replaceAll("<bot>", "")),
-                color: mine ? Colors.blue : Colors.blue[100],
+                color: mine ? Colors.lightBlue[100] : Colors.white,
                 padding: BubbleEdges.all(20),
               
               )),

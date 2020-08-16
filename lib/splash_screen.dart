@@ -21,7 +21,7 @@ class StartState extends State<SplashScreen> {
   }
 
   startTimer() async{
-    var duration= Duration(seconds: 4);
+    var duration= Duration(seconds: 3);
     return Timer(duration, route);
   }
 
@@ -40,14 +40,14 @@ class StartState extends State<SplashScreen> {
           children: <Widget>[
             Container(
               alignment: Alignment.topLeft,
-              width: 20,
-              height: 20,
-              child: Image.asset("images/logo.png"),
+              width: 280,
+              height: 280,
+              child: Image.asset("images/logoapp.png"),
             ),
             Padding(padding: EdgeInsets.only(top: 20),),
             Text(
-              "ChatBot App",
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              "Covid-19 ChatBot",
+              style: TextStyle(fontSize: 25, color: Colors.white),
             ),
             Padding(padding: EdgeInsets.only(top: 20),),
             CircularProgressIndicator(
@@ -57,7 +57,6 @@ class StartState extends State<SplashScreen> {
           ],
         ),
       ),
-
     );
   }
 }
