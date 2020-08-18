@@ -12,15 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chatbot Covid',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+//      theme: ThemeData(
+//        primarySwatch: Colors.blue,
+//      ),
 //        home: MyHomePage(title: 'MyHomepage Title')
       home: SplashScreen(),
     );
   }
-
-
 }
 
 class MyHomePage extends StatefulWidget {
@@ -40,23 +38,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-//        leading: Image.asset('images/logoapp.png'),
-        title: Text("Covid-19 Chatbot"),
-      ),
+//      appBar: AppBar(
+////        leading: Image.asset('images/logoapp.png'),
+////        backgroundColor: Color(0xFFB4C5C6).withOpacity(1),
+//        title: Text("Covid-19 Chatbot"),
+//      ),
 
       body: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage("images/chatbg.png")
-                , fit: BoxFit.cover)
-        ),
-        padding: EdgeInsets.only(top: 15),
+//        decoration: BoxDecoration(
+//            image: DecorationImage(image: AssetImage("images/chatbg.png")
+//                , fit: BoxFit.cover)
+//        ),
+//        padding: EdgeInsets.only(top: 15),
 
         child: Column(   
           children: [
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              child: Text("Cobot"),
+            ),
             Center(
               child: Container(
-                decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(10)) ),
+//                decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(10)) ),
                 padding: EdgeInsets.all(10),
                 child: Text("Today"),
               ),
