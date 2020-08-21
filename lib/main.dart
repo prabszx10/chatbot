@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'package:flutter/cupertino.dart';
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'splash_screen.dart';
+import 'package:flutter_dialogflow/dialogflow_v2.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
 //        primarySwatch: Colors.blue,
 //      ),
 //        home: MyHomePage(title: 'MyHomepage Title')
-      home: SplashScreen(),
+      home:SplashScreen(),
     );
   }
 }
@@ -29,152 +31,157 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final GlobalKey<AnimatedListState> _listKey = GlobalKey();
-  List<String> _data = [];
-  static const String BOT_URL =
-      "https://chatbot-covid-api.herokuapp.com/bot"; // replace with server address
-  TextEditingController _queryController = TextEditingController();
+  final List<ChatMessage> _messages = <ChatMessage>[];
+  final TextEditingController _textController = new TextEditingController();
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-//      appBar: AppBar(
-////        leading: Image.asset('images/logoapp.png'),
-////        backgroundColor: Color(0xFFB4C5C6).withOpacity(1),
-//        title: Text("Covid-19 Chatbot"),
-//      ),
-
-      body: Container(
-//        decoration: BoxDecoration(
-//            image: DecorationImage(image: AssetImage("images/chatbg.png")
-//                , fit: BoxFit.cover)
-//        ),
-//        padding: EdgeInsets.only(top: 15),
-
-        child: Column(   
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 50),
-              child: Text("Cobot"),
-            ),
-            Center(
-              child: Container(
-//                decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(10)) ),
-                padding: EdgeInsets.all(10),
-                child: Text("Today"),
+  Widget _buildTextComposer() {
+    return new IconTheme(
+      data: new IconThemeData(color: Theme.of(context).accentColor),
+      child: new Container(
+        margin: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: new Row(
+          children: <Widget>[
+            new Flexible(
+              child: new TextField(
+                controller: _textController,
+                onSubmitted: _handleSubmitted,
+                decoration:
+                new InputDecoration.collapsed(hintText: "Send a message"),
               ),
             ),
-
-            Flexible(
-              
-              child:     AnimatedList(
-                 padding: EdgeInsets.only(top:30, bottom: 15),
-              // key to call remove and insert from anywhere
-              key: _listKey,
-              initialItemCount: _data.length,
-              itemBuilder:
-                  (BuildContext context, int index, Animation animation) {
-                return _buildItem(_data[index], animation, index);
-              }),
+            new Container(
+              margin: new EdgeInsets.symmetric(horizontal: 4.0),
+              child: new IconButton(
+                  icon: new Icon(Icons.send),
+                  onPressed: () => _handleSubmitted(_textController.text)),
             ),
-
-            Divider(
-              height: 0,
-              color: Colors.blue,
-            ),
-
-            Container(
-              decoration: BoxDecoration(
-          color: Colors.white
-        ),
-              child: ListTile(
-                
-                title: Container(
-                  child: TextField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.message,
-                          color: Colors.blue,
-                        ),
-                        hintText: "Type a Massage",
-                        hintStyle: TextStyle(color: Colors.blue, fontSize: 15),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(50))),
-                            maxLines: 1,
-                            controller: _queryController,
-              textInputAction: TextInputAction.send,
-              onSubmitted: (msg) {
-                this._getResponse();
-              },
-                  ),
-                  
-                ),
-                trailing: IconButton(
-                  icon: Icon(Icons.send),
-                  iconSize: 40,
-                  color: Colors.blue,
-                  // splashColor: Colors.purple,
-                  onPressed: () {
-                    this._getResponse();
-                  },
-                ),
-              ),
-            )
-
           ],
         ),
       ),
-     
     );
   }
 
-  http.Client _getClient() {
-    return http.Client();
+  void Response(query) async {
+    _textController.clear();
+    AuthGoogle authGoogle =
+    await AuthGoogle(fileJson: "assets/daffashafwan-7c6bc2d9633c.json").build();
+    Dialogflow dialogflow = Dialogflow(authGoogle: authGoogle, language: Language.english);
+    AIResponse response = await dialogflow.detectIntent(query);
+    ChatMessage message = new ChatMessage(
+      text: response.getMessage() ??
+          new CardDialogflow(response.getListMessage()[0]).title,
+      name: "Bot",
+      type: false,
+    );
+    setState(() {
+      _messages.insert(0, message);
+    });
   }
 
-  void _getResponse() {
-    if (_queryController.text.length > 0) {
-      this._insertSingleItem(_queryController.text);
-      var client = _getClient(); // get http client
-      try {
-        client.post(
-          BOT_URL,
-          body: {"query": _queryController.text},
-        )..then((response) {
-            Map<String, dynamic> data =
-                jsonDecode(response.body); // decode json data
-            _insertSingleItem(data['response'] + "<bot>"); // add response
-          });
-      } catch (e) {
-        print("Failed -> $e");
-      } finally {
-        client.close(); // close client
-        _queryController.clear();
-      }
-    }
+  void _handleSubmitted(String text) {
+    _textController.clear();
+    ChatMessage message = new ChatMessage(
+      text: text,
+      name: "Me",
+      type: true,
+    );
+    setState(() {
+      _messages.insert(0, message);
+    });
+    Response(text);
   }
 
-  void _insertSingleItem(String message) {
-    _data.add(message);
-    _listKey.currentState.insertItem(_data.length - 1);
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+        title: Text("COBOT", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
+      ),
+      body: new Column(children: <Widget>[
+        new Flexible(
+            child: new ListView.builder(
+              padding: new EdgeInsets.all(8.0),
+              reverse: true,
+              itemBuilder: (_, int index) => _messages[index],
+              itemCount: _messages.length,
+            )),
+        new Divider(height: 1.0),
+        new Container(
+          decoration: new BoxDecoration(color: Theme.of(context).cardColor),
+          child: _buildTextComposer(),
+        ),
+      ]),
+    );
+  }
+}
+
+class ChatMessage extends StatelessWidget {
+  ChatMessage({this.text, this.name, this.type});
+
+  final String text;
+  final String name;
+  final bool type;
+
+  List<Widget> otherMessage(context) {
+    return <Widget>[
+      new Container(
+        margin: const EdgeInsets.only(right: 16.0),
+        child: new CircleAvatar(child: new Text('B')),
+      ),
+      new Expanded(
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            new Text(this.name,
+                style: new TextStyle(fontWeight: FontWeight.bold)),
+            new Container(
+              margin: const EdgeInsets.only(top: 5.0),
+              child: new Text(text),
+            ),
+          ],
+        ),
+      ),
+    ];
   }
 
-  Widget _buildItem(String item, Animation animation, int index) {
-    bool mine = item.endsWith("<bot>");
-    return SizeTransition(
-        sizeFactor: animation,
-        child: Padding(
-          padding: EdgeInsets.only(top: 10),
-          child: Container(
-              alignment: mine ? Alignment.topLeft : Alignment.topRight,
+  List<Widget> myMessage(context) {
+    return <Widget>[
+      new Expanded(
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            new Text(this.name, style: Theme.of(context).textTheme.subhead),
+            new Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+              margin: const EdgeInsets.only(top: 5.0),
+              child: new Text(text, style: TextStyle(color: Colors.white),),
+            ),
+          ],
+        ),
+      ),
+      new Container(
+        margin: const EdgeInsets.only(left: 16.0),
+        child: new CircleAvatar(
+            child: new Text(
+              this.name[0],
+              style: new TextStyle(fontWeight: FontWeight.bold),
+            )),
+      ),
+    ];
+  }
 
-              child: Bubble(
-                child: Text(item.replaceAll("<bot>", "")),
-                color: mine ? Colors.lightBlue[100] : Colors.white,
-                padding: BubbleEdges.all(20),
-              
-              )),
-        ));
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
+      child: new Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: this.type ? myMessage(context) : otherMessage(context),
+      ),
+    );
   }
 
 }

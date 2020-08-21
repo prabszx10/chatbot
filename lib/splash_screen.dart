@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'Navbar.dart';
 
 class SplashScreen extends StatefulWidget{
 
@@ -27,7 +27,7 @@ class StartState extends State<SplashScreen> {
 
   route(){
     Navigator.pushReplacement(context, MaterialPageRoute(
-      builder: (context) => MyHomePage()
+      builder: (context) => Halamannav()
     ));
   }
   @override
