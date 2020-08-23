@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'panels/worldwidepanel.dart';
-import 'pages/countyPage.dart';
+import 'datacountrysearch/countryData.dart';
 import 'panels/mosteffectedcountries.dart';
 import 'package:http/http.dart' as http;
 

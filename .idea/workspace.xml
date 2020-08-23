@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b6483889-916a-4d40-a457-37964741e831" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/Navbar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Navbar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/homepage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/countyPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datacountrysearch/countryData.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/search.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datacountrysearch/searchCountryData.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/top.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/top.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fqtK3TULjK2J27KI4yYHRoi99P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="D:/flutter/chatbottt/chatbot" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\test\chatbot\lib\providers" />
+      <recent name="D:\test\chatbot\lib" />
+      <recent name="D:\test\chatbot\lib\widgets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\test\chatbot\assets" />
+      <recent name="D:\test\chatbot\fonts" />
+      <recent name="D:\test\chatbot" />
+      <recent name="D:\test\chatbot\lib" />
+      <recent name="D:\test\chatbot\lib\widgets" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6483889-916a-4d40-a457-37964741e831" name="Default Changelist" comment="" />
+      <created>1596957382782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596957382782</updated>
+    </task>
+    <task id="LOCAL-00001" summary="second submit chatbot">
+      <created>1597576096934</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597576096934</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="second submit chatbot" />
+    <option name="LAST_COMMIT_MESSAGE" value="second submit chatbot" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="91" key="#Notifications" timestamp="1597535516081">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="91" key="#Notifications/0.0.1536.864@0.0.1536.864" timestamp="1597535516081" />
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597901256230">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1597901256230" />
+    <state x="408" y="25" key="CommitChangelistDialog2" timestamp="1597576069326">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="408" y="25" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1597576069326" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1598140616062">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1598140616062" />
+    <state width="1386" height="466" key="GridCell.Tab.0.bottom" timestamp="1598173116104">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1386" height="466" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598173116104" />
+    <state width="1386" height="466" key="GridCell.Tab.0.center" timestamp="1598173116104">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1386" height="466" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598173116104" />
+    <state width="1386" height="466" key="GridCell.Tab.0.left" timestamp="1598173116103">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1386" height="466" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598173116103" />
+    <state width="1386" height="466" key="GridCell.Tab.0.right" timestamp="1598173116104">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1386" height="466" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598173116104" />
+    <state x="555" y="78" key="SettingsEditor" timestamp="1597535484469">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="555" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1597535484469" />
+    <state x="93" y="93" width="1350" height="678" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1597535695032">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.864@0.0.1536.864" timestamp="1597535695032" />
+    <state x="848" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1598185341762">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="848" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598185341762" />
+    <state x="298" y="167" width="609" height="536" key="find.popup" timestamp="1597982307239">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="298" y="167" width="609" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1597982307239" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1597588643576">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1597588643576" />
+    <state x="266" y="185" key="search.everywhere.popup" timestamp="1597982278577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="266" y="185" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1597982278577" />
+  </component>
+</project>

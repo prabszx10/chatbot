@@ -9,7 +9,6 @@ class SplashScreen extends StatefulWidget{
   State<StatefulWidget> createState() {
     return StartState();
   }
-
 }
 
 class StartState extends State<SplashScreen> {

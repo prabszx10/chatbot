@@ -40,28 +40,6 @@ bottomNavigationBar: CurvedNavigationBar(
   ],
           onTap: _onItemTapped,
 ),
-//      bottomNavigationBar: BottomNavigationBar(
-//        backgroundColor: Colors.blue,
-//        items: [
-//          BottomNavigationBarItem(
-//            icon: Icon(Icons.home),
-//            title: Text('Home'),
-//          ),
-//          BottomNavigationBarItem(
-//            icon: Icon(Icons.message),
-//            title: Text('Chat'),
-//          ),
-//          BottomNavigationBarItem(
-//            icon: Icon(Icons.list),
-//            title: Text('Top'),
-//          ),
-//        ],
-//        type: BottomNavigationBarType.fixed,
-//        currentIndex: _selectedIndex,
-//        fixedColor: Colors.blue,
-//        onTap: _onItemTapped,
-//      ),
-
     );
   }
 

@@ -1,8 +1,5 @@
-import 'dart:convert';
 import 'package:flutter/cupertino.dart';
-import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'splash_screen.dart';
 import 'package:flutter_dialogflow_v2/flutter_dialogflow.dart';
 
@@ -10,15 +7,9 @@ import 'package:flutter_dialogflow_v2/flutter_dialogflow.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Chatbot Covid',
-//      theme: ThemeData(
-//        primarySwatch: Colors.blue,
-//      ),
-//        home: MyHomePage(title: 'MyHomepage Title')
       home:SplashScreen(),
     );
   }
@@ -62,7 +53,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  // ignore: non_constant_identifier_names
   void Response(query) async {
     _textController.clear();
     AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/dialogFlow.json").build();
