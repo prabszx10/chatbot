@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  flutter_dialogflow: ^0.1.2
+  flutter_dialogflow_v2: ^0.1.0
   curved_navigation_bar: ^0.3.3
   flutter:
     sdk: flutter
@@ -31,11 +31,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  url_launcher:
+  url_launcher:   
   shared_preferences:
   dynamic_theme:
   pie_chart:
-  http: ^0.12.0+4
+  http: ^0.11.3+16
   bubble: ^1.1.9+1
 
 dev_dependencies:

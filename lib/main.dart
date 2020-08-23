@@ -4,7 +4,8 @@ import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'splash_screen.dart';
-import 'package:flutter_dialogflow/dialogflow_v2.dart';
+import 'package:flutter_dialogflow_v2/flutter_dialogflow.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -61,14 +62,14 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   void Response(query) async {
     _textController.clear();
-    AuthGoogle authGoogle =
-    await AuthGoogle(fileJson: "assets/daffashafwan-7c6bc2d9633c.json").build();
-    Dialogflow dialogflow = Dialogflow(authGoogle: authGoogle, language: Language.english);
-    AIResponse response = await dialogflow.detectIntent(query);
+    AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/dialogFlow.json").build();
+    Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
+    AIResponse response = await dialogFlow.detectIntent(query);
     ChatMessage message = new ChatMessage(
-      text: response.getMessage() ??
+      text:  response.getMessage() ??
           new CardDialogflow(response.getListMessage()[0]).title,
       name: "Bot",
       type: false,
@@ -137,8 +138,10 @@ class ChatMessage extends StatelessWidget {
             new Text(this.name,
                 style: new TextStyle(fontWeight: FontWeight.bold)),
             new Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(20)),
               margin: const EdgeInsets.only(top: 5.0),
-              child: new Text(text),
+              child: new Text(text, style: TextStyle(color: Colors.white),),
             ),
           ],
         ),
