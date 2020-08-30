@@ -1,16 +1,24 @@
-android.content.res.Resources#getIdentifier present: false
+android.content.res.Resources#getIdentifier present: true
 Web content present: true
 Referenced Strings:
   %s.%sParcelizer
   0
   0x%08x
+  A::
   ACCESSIBLE_NAVIGATION
   ACTION_ARGUMENT_EXTEND_SELECTION_BOOLEAN
   ACTION_ARGUMENT_MOVEMENT_GRANULARITY_INT
   ACTION_ARGUMENT_SELECTION_END_INT
   ACTION_ARGUMENT_SELECTION_START_INT
+  ADD
+  ALREADY_LISTENING
+  API_NOT_CONNECTED
+  API_UNAVAILABLE
+  API_VERSION_UPDATE_REQUIRED
+  ATTACH
   AccessibilityBridge
   AccessibilityChannel
+  AccountAccessor
   AppLifecycleState.detached
   AppLifecycleState.inactive
   AppLifecycleState.paused
@@ -20,8 +28,10 @@ Referenced Strings:
   BOTH
   BOTTOM_OVERLAYS
   BanParcelableUsage
+  BasePendingResult
   Brightness.dark
   Brightness.light
+  CANCELED
   CHARACTERS
   CLICK
   CLIP_PATH
@@ -31,18 +41,25 @@ Referenced Strings:
   CREATED
   CUSTOM_ACTION
   CUT
+  Class
   ClickableViewAccessibility
   Clipboard.getData
   Clipboard.setData
+  ConnectionStatusConfig
+  ConnectionTracker
   DARK
   DATA
   DATETIME
+  DEAD_CLIENT
   DECREASE
   DESTROYED
+  DETACH
+  DEVELOPER_ERROR
   DID_GAIN_ACCESSIBILITY_FOCUS
   DID_LOSE_ACCESSIBILITY_FOCUS
   DISABLE_ANIMATIONS
   DISMISS
+  DRIVE_EXTERNAL_STORAGE_REQUIRED
   DartExecutor
   DartMessenger
   Destroying.
@@ -50,7 +67,18 @@ Referenced Strings:
   DeviceOrientation.landscapeRight
   DeviceOrientation.portraitDown
   DeviceOrientation.portraitUp
+  DialogRedirect
   EMAIL_ADDRESS
+  ERROR
+  ERROR_ALREADY_REQUESTING_PERMISSIONS
+  ERROR_CALCULATE_DISTANCE_ILLEGAL_ARGU...
+  ERROR_CALCULATE_DISTANCE_INVALID_PARAMS
+  ERROR_GEOCODING_ADDRESS
+  ERROR_GEOCODING_COORDINATES
+  ERROR_GEOCODING_INVALID_COORDINATES
+  ERROR_GEOCODNG_ADDRESSNOTFOUND
+  ERROR_MISSING_CONTEXT
+  ERROR_UPDATING_LOCATION
   FRAMEWORK_CLIENT
   FlutterActivity
   FlutterActivityAndFragmentDelegate
@@ -64,19 +92,38 @@ Referenced Strings:
   FlutterSurfaceView
   FlutterTextureView
   FlutterView
+  FragmentActivity
+  FragmentManager
+  GmsClient
+  GmsClientSupervisor
+  GoogleApiActivity
+  GoogleApiAvailability
+  GoogleApiHandler
+  GoogleApiManager
+  GoogleCertificates
+  GooglePlayServicesErrorDialog
+  GooglePlayServicesUtil
+  GoogleSignatureVerifier
   HAS_CHECKED_STATE
   HAS_ENABLED_STATE
   HAS_IMPLICIT_SCROLLING
   HAS_TOGGLED_STATE
   HEAVY_IMPACT
+  HIDE
+  HandlerLeak
   HapticFeedback.vibrate
   HapticFeedbackType.heavyImpact
   HapticFeedbackType.lightImpact
   HapticFeedbackType.mediumImpact
   HapticFeedbackType.selectionClick
+  I
   II
   INCREASE
   INITIALIZED
+  INTERNAL_ERROR
+  INTERRUPTED
+  INVALID_ACCOUNT
+  INVALID_LOCATION_SETTINGS
   INVERT_COLORS
   IS_BUTTON
   IS_CHECKED
@@ -96,31 +143,44 @@ Referenced Strings:
   IS_TOGGLED
   IconCompat
   InlinedApi
+  J
   LANDSCAPE_LEFT
   LANDSCAPE_RIGHT
   LEFT
+  LICENSE_CHECK_FAILED
   LIGHT
   LIGHT_IMPACT
   LONG_PRESS
   LTR
+  LayoutInflaterCompatHC
   LifecycleChannel
+  LoaderManager
+  Loaders:
   LocalizationChannel
+  LocationClientImpl
+  LocationServices.API
   MEDIUM_IMPACT
   MOVE_CURSOR_BACKWARD_BY_CHARACTER
   MOVE_CURSOR_BACKWARD_BY_WORD
   MOVE_CURSOR_FORWARD_BY_CHARACTER
   MOVE_CURSOR_FORWARD_BY_WORD
   MULTILINE
+  MetadataValueReader
   MethodCallHandlerImpl
   MouseCursorChannel
   NAME
   NAMES_ROUTE
+  NETWORK_ERROR
   NONE
   NO_ACTIVITY
   NO_TARGET
+  NULL
   NUMBER
   NavigationChannel
+  NetworkLocationStatus:
   NewApi
+  NotificationCompat
+  O:
   OK
   ON_ANY
   ON_CREATE
@@ -130,6 +190,8 @@ Referenced Strings:
   ON_START
   ON_STOP
   OPACITY
+  OP_SET_MAX_LIFECYCLE
+  Operations:
   PASTE
   PHONE
   PLAIN_TEXT
@@ -137,16 +199,28 @@ Referenced Strings:
   PORTRAIT_DOWN
   PORTRAIT_UP
   POSTAL_ADDRESS
+  PRIORITY_BALANCED_POWER_ACCURACY
+  PRIORITY_HIGH_ACCURACY
+  PRIORITY_LOW_POWER
+  PRIORITY_NO_POWER
   PlatformChannel
+  PlatformVersion
   PlatformViewsChannel
   PlatformViewsController
   PrivateApi
+  REL
+  REMOVE
+  REPLACE
+  RESOLUTION_REQUIRED
   RESOURCE
+  RESTRICTED_PROFILE
   RESUMED
   RIGHT
   RTL
   RestorationChannel
   RestrictedApi
+  ResultT:
+  SAFE_PARCELABLE_NULL_STRING
   SCOPES_ROUTE
   SCROLL_DOWN
   SCROLL_LEFT
@@ -154,12 +228,28 @@ Referenced Strings:
   SCROLL_UP
   SELECTION_CLICK
   SENTENCES
+  SERVICE_DISABLED
+  SERVICE_INVALID
+  SERVICE_MISSING
+  SERVICE_MISSING_PERMISSION
+  SERVICE_UPDATING
+  SERVICE_VERSION_UPDATE_REQUIRED
+  SET_PRIMARY_NAV
   SET_SELECTION
+  SHOW
   SHOW_ON_SCREEN
+  SIGN_IN_FAILED
+  SIGN_IN_REQUIRED
   STANDARD
   STARTED
+  SUCCESS
+  SUCCESS_CACHE
   Samsung
   SettingsChannel
+  SignIn.API
+  SignIn.INTERNAL_API
+  SignInClientImpl
+  SignInCoordinator
   StorageError
   SystemChannel
   SystemChrome.restoreSystemUIOverlays
@@ -172,10 +262,15 @@ Referenced Strings:
   SystemSoundType.click
   SystemUiOverlay.bottom
   SystemUiOverlay.top
+  T
+  T:
   TAP
+  TContinuationResult:
   TEXT
+  TIMEOUT
   TOP_OVERLAYS
   TRANSFORM
+  TT
   TextCapitalization.characters
   TextCapitalization.none
   TextCapitalization.sentences
@@ -212,32 +307,68 @@ Referenced Strings:
   TextInputType.text
   TextInputType.url
   TextInputType.visiblePassword
+  Theme.Dialog.Alert
+  UNFINISHED
   UNKNOWN
+  UNSET_PRIMARY_NAV
   URI
   URL
   UTF8
+  UnknownNullness
+  UntrackedBindService
   UrlLauncherPlugin
   V:
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBCaWdJb...
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu
   VISIBLE_PASSWORD
+  ViewCompat
   ViewConstructor
   WORDS
+  Z
+  ZZZ
   _
+  _LifecycleAdapter
   accessibility
+  accuracy
+  actionIntent
   actionLabel
   activateSystemCursor
   addView
+  address
   addressCity
   addressCountry
   addressLocality
   addressRegion
   addressState
+  administrativeArea
+  altitude
   alwaysUse24HourFormat
   android
+  android.car.EXTENSIONS
+  android.hardware.type.embedded
+  android.hardware.type.iot
+  android.hardware.type.watch
   android.intent.action.RUN
   android.intent.action.VIEW
+  android.intent.category.DEFAULT
+  android.location.MODE_CHANGED
+  android.people
+  android.permission.ACCESS_BACKGROUND_...
+  android.permission.ACCESS_COARSE_LOCA...
+  android.permission.ACCESS_FINE_LOCATION
+  android.settings.APPLICATION_DETAILS_...
+  android.support.action.semanticAction
+  android.support.action.showsUserInter...
+  android.support.actionExtras
+  android.support.allowGeneratedReplies
+  android.support.dataRemoteInputs
+  android.support.groupKey
+  android.support.isGroupSummary
+  android.support.localOnly
+  android.support.remoteInputs
+  android.support.sortKey
+  android.support.useSideChannel
   android.util.LongArray
   android.view.View
   android.widget.Button
@@ -249,8 +380,28 @@ Referenced Strings:
   android.widget.ScrollView
   android.widget.SeekBar
   android.widget.Switch
+  android:backStackId
+  android:cancelable
+  android:savedDialogState
+  android:showsDialog
+  android:style
+  android:support:fragments
+  android:support:next_request_index
+  android:support:request_fragment_who
+  android:support:request_indicies
+  android:target_req_state
+  android:target_state
+  android:theme
+  android:user_visible_hint
+  android:view_state
+  androidx.lifecycle.BundlableSavedStat...
+  androidx.lifecycle.LifecycleDispatche...
+  androidx.lifecycle.ViewModelProvider....
   androidx.savedstate.Restarter
+  androidx.transition.FragmentTransitio...
+  anim
   announce
+  arch_disk_io_%d
   args
   autocorrect
   autofill
@@ -267,17 +418,81 @@ Referenced Strings:
   birthdayYear
   cached_engine_id
   canLaunch
+  cancel
   character
+  checkPermissionStatus
+  checkPlayServicesAvailability
+  checkServiceStatus
+  circles
+  class
+  classes_to_restore
   clear
   clearFocus
   click
+  client_name
   clipboard
   closeWebView
+  cn.google
   codePoint
   com.android.browser.headers
+  com.android.vending
+  com.baseflow.flutter/location_permiss...
+  com.baseflow.flutter/location_permiss...
+  com.baseflow.geolocator
+  com.baseflow.googleapiavailability
+  com.baseflow.location_permissions
+  com.google
+  com.google.android.clockwork.home.UPD...
+  com.google.android.gms
+  com.google.android.gms.availability
+  com.google.android.gms.chimera
+  com.google.android.gms.common.interna...
+  com.google.android.gms.common.interna...
+  com.google.android.gms.common.interna...
+  com.google.android.gms.common.interna...
+  com.google.android.gms.common.interna...
+  com.google.android.gms.dynamic.IObjec...
+  com.google.android.gms.location.IDevi...
+  com.google.android.gms.location.ILoca...
+  com.google.android.gms.location.ILoca...
+  com.google.android.gms.location.inter...
+  com.google.android.gms.location.inter...
+  com.google.android.gms.signin
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.interna...
+  com.google.android.gms.signin.service...
+  com.google.android.gms.version
+  com.google.android.location.internal....
+  com.google.android.wearable.app
+  com.google.app.id
   commit
+  common_google_play_services_api_unava...
+  common_google_play_services_invalid_a...
+  common_google_play_services_invalid_a...
+  common_google_play_services_network_e...
+  common_google_play_services_network_e...
+  common_google_play_services_resolutio...
+  common_google_play_services_resolutio...
+  common_google_play_services_restricte...
+  common_google_play_services_restricte...
+  common_google_play_services_sign_in_f...
+  common_google_play_services_sign_in_f...
   composingBase
   composingExtent
+  content
+  country
   countryName
   create
   creditCardExpirationDate
@@ -286,15 +501,20 @@ Referenced Strings:
   creditCardExpirationYear
   creditCardNumber
   creditCardSecurityCode
+  d
   dark
   data
   decimal
+  defaultGoogleSignInAccount
   default_input_method
   destroy_engine_with_activity
   deviceId
   direction
   display
+  displayName
   dispose
+  distanceBetween
+  distanceFilter
   editingValue
   email
   emailAddress
@@ -302,15 +522,26 @@ Referenced Strings:
   enableJavaScript
   enableSuggestions
   enable_state_restoration
+  endLatitude
+  endLongitude
   error
+  error_code
+  expirationTime
   extendedAddress
   extendedPostalCode
   extent
+  extras
+  failing_client_id
   familyName
+  feature
   fields
+  find
   flags
   flutter
   flutter.
+  flutter.baseflow.com/geolocator/events
+  flutter.baseflow.com/geolocator/methods
+  flutter.baseflow.com/google_api_avail...
   flutter/accessibility
   flutter/isolate
   flutter/keyevent
@@ -325,35 +556,50 @@ Referenced Strings:
   flutter/system
   flutter/textinput
   flutter_assets
+  forceAndroidLocationManager
+  fragment
   framework
   fullStreetAddress
+  gcore_
   gender
   get
   getAll
   getChildId
+  getCurrentPosition
+  getFeatureId
+  getLastKnownPosition
   getParentNodeId
   getResId
   getResPackage
   getSourceNodeId
+  getType
   givenName
+  google
+  googleSignInAccount
   grab
   grabbing
+  grantedScopes
   headers
+  heading
   height
   hints
   horizontalDoubleArrow
+  https://plus.google.com/
   hybrid
+  icon
   id
   image
   inputAction
   inputType
   input_method
+  invisible_actions
   io.flutter.Entrypoint
   io.flutter.InitialRoute
   io.flutter.embedded_views_preview
   io.flutter.embedding.android.NormalTheme
   io.flutter.embedding.android.SplashSc...
   io.flutter.plugins.GeneratedPluginReg...
+  isoCountryCode
   isolate_snapshot_data
   java.
   key
@@ -363,22 +609,40 @@ Referenced Strings:
   keyup
   kind
   label
+  latitude
   launch
+  layout_inflater
   libapp.so
   libflutter.so
   light
+  listen
+  localeIdentifier
+  locality
+  location
+  locationServices
+  location_mode
+  location_permissions
+  location_providers_allowed
   longPress
+  longitude
+  m
   mChildNodeIds
+  mFactory2
   mH
   mNextServedView
+  mOnKeyListener
   mServedView
   main
+  market://details
   memoryPressure
   message
   metaState
   method
   middleInitial
   middleName
+  mocked
+  ms
+  n
   name
   namePrefix
   nameSuffix
@@ -386,12 +650,24 @@ Referenced Strings:
   newUsername
   nodeId
   none
+  notification
+  notify_manager
+  null
+  obfuscatedIdentifier
   obscureText
+  observe
+  onMenuKeyEvent
   oneTimeCode
   opaque
+  openAppSettings
   overlay
+  package
+  package:
   params
   password
+  pcampaignid
+  pendingIntent
+  pending_intent
   personFamilyName
   personGivenName
   personMiddleInitial
@@ -403,32 +679,50 @@ Referenced Strings:
   phoneNational
   phoneNumber
   phoneNumberDevice
+  photoUrl
+  placemarkFromAddress
+  placemarkFromCoordinates
   plainCodePoint
   platformBrightness
   plugins
   plugins.flutter.io/shared_preferences
   plugins.flutter.io/url_launcher
   popRoute
+  position
   postalAddress
   postalAddressExtended
   postalAddressExtendedPostalCode
   postalCode
   primaryColor
   productId
+  profile
   push
   put
   read
   registerWith
+  release
+  remoteInputs
   remove
+  removeObserver
   removeView
   removeViewImmediate
   repeatCount
+  requestPermission
   resize
+  resolution
+  restricted_profile
   route
   samsung
   scanCode
   selectionBase
   selectionExtent
+  semanticAction
+  serverAuthCode
+  serviceActionBundleKey
+  serviceIntentCall
+  serviceResponseIntentKey
+  service_esmobile
+  service_googleme
   setBool
   setDirection
   setDouble
@@ -437,12 +731,25 @@ Referenced Strings:
   setLocale
   setString
   setStringList
+  setValue
+  shouldShowRequestPermissionRationale
+  showDialog
+  showsUserInterface
   signed
   smsOTPCode
   source
+  speed
+  speed_accuracy
+  startLatitude
+  startLongitude
   statusBarColor
   statusBarIconBrightness
+  statusCode
   streetAddress
+  string
+  subAdministrativeArea
+  subLocality
+  subThoroughfare
   surface
   systemNavigationBarColor
   systemNavigationBarDividerColor
@@ -457,19 +764,28 @@ Referenced Strings:
   textCapitalization
   textScaleFactor
   texture
+  thoroughfare
+  timeInterval
+  timestamp
+  title
+  tokenId
   tooltip
   touch
   transform
   transition_animation_scale
   transparent
+  true
   type
   uniqueIdentifier
+  unknown
   updateViewLayout
   url
   useWebView
+  user
   username
   value
   vendorId
+  version
   verticalDoubleArrow
   viewFocused
   viewType
@@ -478,8 +794,9 @@ Referenced Strings:
   window
   write
   x
-Marking id:text:2131034175 used because its prefix matches string pool constant text
-Marking id:text2:2131034176 used because its prefix matches string pool constant text
+Marking drawable:googleg_disabled_color_18:2130968595 used because its prefix matches string pool constant google
+Marking drawable:googleg_standard_color_18:2130968596 used because its prefix matches string pool constant google
+Marking integer:google_play_services_version:2131099648 used because its prefix matches string pool constant google
 Marking id:accessibility_action_clickable_span:2131034112 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_0:2131034113 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_1:2131034114 used because its prefix matches string pool constant accessibility
@@ -513,7 +830,6 @@ Marking id:accessibility_custom_action_6:2131034141 used because its prefix matc
 Marking id:accessibility_custom_action_7:2131034142 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_8:2131034143 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_9:2131034144 used because its prefix matches string pool constant accessibility
-Marking drawable:launch_background:2130968576 used because its prefix matches string pool constant launch
 Marking attr:android_color:-1 used because its prefix matches string pool constant android
 Marking attr:android_alpha:-1 used because its prefix matches string pool constant android
 Marking attr:android_fontStyle:-1 used because its prefix matches string pool constant android
@@ -534,29 +850,127 @@ Marking attr:android_endX:-1 used because its prefix matches string pool constan
 Marking attr:android_endY:-1 used because its prefix matches string pool constant android
 Marking attr:android_tileMode:-1 used because its prefix matches string pool constant android
 Marking attr:android_offset:-1 used because its prefix matches string pool constant android
+Marking id:light:2131034164 used because its prefix matches string pool constant light
+Marking color:notification_action_color_filter:2130837515 used because its prefix matches string pool constant notification
+Marking color:notification_icon_bg_color:2130837516 used because its prefix matches string pool constant notification
+Marking dimen:notification_action_icon_size:2130903047 used because its prefix matches string pool constant notification
+Marking dimen:notification_action_text_size:2130903048 used because its prefix matches string pool constant notification
+Marking dimen:notification_big_circle_margin:2130903049 used because its prefix matches string pool constant notification
+Marking dimen:notification_content_margin_start:2130903050 used because its prefix matches string pool constant notification
+Marking dimen:notification_large_icon_height:2130903051 used because its prefix matches string pool constant notification
+Marking dimen:notification_large_icon_width:2130903052 used because its prefix matches string pool constant notification
+Marking dimen:notification_main_column_padding_top:2130903053 used because its prefix matches string pool constant notification
+Marking dimen:notification_media_narrow_margin:2130903054 used because its prefix matches string pool constant notification
+Marking dimen:notification_right_icon_size:2130903055 used because its prefix matches string pool constant notification
+Marking dimen:notification_right_side_padding_top:2130903056 used because its prefix matches string pool constant notification
+Marking dimen:notification_small_icon_background_padding:2130903057 used because its prefix matches string pool constant notification
+Marking dimen:notification_small_icon_size_as_large:2130903058 used because its prefix matches string pool constant notification
+Marking dimen:notification_subtext_size:2130903059 used because its prefix matches string pool constant notification
+Marking dimen:notification_top_pad:2130903060 used because its prefix matches string pool constant notification
+Marking dimen:notification_top_pad_large_text:2130903061 used because its prefix matches string pool constant notification
+Marking drawable:notification_action_background:2130968598 used because its prefix matches string pool constant notification
+Marking drawable:notification_bg:2130968599 used because its prefix matches string pool constant notification
+Marking drawable:notification_bg_low:2130968600 used because its prefix matches string pool constant notification
+Marking drawable:notification_bg_low_normal:2130968601 used because its prefix matches string pool constant notification
+Marking drawable:notification_bg_low_pressed:2130968602 used because its prefix matches string pool constant notification
+Marking drawable:notification_bg_normal:2130968603 used because its prefix matches string pool constant notification
+Marking drawable:notification_bg_normal_pressed:2130968604 used because its prefix matches string pool constant notification
+Marking drawable:notification_icon_background:2130968605 used because its prefix matches string pool constant notification
+Marking drawable:notification_template_icon_bg:2130968606 used because its prefix matches string pool constant notification
+Marking drawable:notification_template_icon_low_bg:2130968607 used because its prefix matches string pool constant notification
+Marking drawable:notification_tile_bg:2130968608 used because its prefix matches string pool constant notification
+Marking id:notification_background:2131034169 used because its prefix matches string pool constant notification
+Marking id:notification_main_column:2131034170 used because its prefix matches string pool constant notification
+Marking id:notification_main_column_container:2131034171 used because its prefix matches string pool constant notification
+Marking layout:notification_action:2131165185 used because its prefix matches string pool constant notification
+Marking layout:notification_action_tombstone:2131165186 used because its prefix matches string pool constant notification
+Marking layout:notification_template_custom_big:2131165187 used because its prefix matches string pool constant notification
+Marking layout:notification_template_icon_group:2131165188 used because its prefix matches string pool constant notification
+Marking layout:notification_template_part_chronometer:2131165189 used because its prefix matches string pool constant notification
+Marking layout:notification_template_part_time:2131165190 used because its prefix matches string pool constant notification
+Marking id:icon:2131034159 used because its prefix matches string pool constant icon
+Marking id:icon_group:2131034160 used because its prefix matches string pool constant icon
+Marking id:icon_only:2131034161 used because its prefix matches string pool constant icon
+Marking attr:imageAspectRatio:2130771982 used because its prefix matches string pool constant image
+Marking attr:imageAspectRatioAdjust:2130771983 used because its prefix matches string pool constant image
+Marking id:title:2131034186 used because its prefix matches string pool constant title
+Marking id:text:2131034183 used because its prefix matches string pool constant text
+Marking id:text2:2131034184 used because its prefix matches string pool constant text
+Marking drawable:launch_background:2130968597 used because its prefix matches string pool constant launch
+Marking id:none:2131034167 used because its prefix matches string pool constant none
+Marking id:dark:2131034156 used because its prefix matches string pool constant dark
 Resource Reference Graph:
-color:notification_action_color_filter:2130837504 => [color:secondary_text_default_material_light:2130837507]
+color:common_google_signin_btn_text_dark:2130837504 => [color:common_google_signin_btn_text_dark_disabled:2130837506, color:common_google_signin_btn_text_dark_pressed:2130837508, color:common_google_signin_btn_text_dark_focused:2130837507, color:common_google_signin_btn_text_dark_default:2130837505]
+color:common_google_signin_btn_text_light:2130837509 => [color:common_google_signin_btn_text_light_disabled:2130837511, color:common_google_signin_btn_text_light_pressed:2130837513, color:common_google_signin_btn_text_light_focused:2130837512, color:common_google_signin_btn_text_light_default:2130837510]
+color:notification_action_color_filter:2130837515 => [color:secondary_text_default_material_light:2130837518]
 dimen:notification_media_narrow_margin:2130903054 => [dimen:notification_content_margin_start:2130903050]
-drawable:notification_action_background:2130968577 => [color:ripple_material_light:2130837506, dimen:compat_button_inset_vertical_material:2130903041, dimen:compat_button_inset_horizontal_material:2130903040, dimen:compat_control_corner_material:2130903044, dimen:compat_button_padding_vertical_material:2130903043, dimen:compat_button_padding_horizontal_material:2130903042]
-drawable:notification_bg:2130968578 => [drawable:notification_bg_normal_pressed:2130968583, drawable:notification_bg_normal:2130968582]
-drawable:notification_bg_low:2130968579 => [drawable:notification_bg_low_pressed:2130968581, drawable:notification_bg_low_normal:2130968580]
-drawable:notification_icon_background:2130968584 => [color:notification_icon_bg_color:2130837505]
-drawable:notification_tile_bg:2130968587 => [drawable:notify_panel_notification_icon_bg:2130968588]
+drawable:common_google_signin_btn_icon_dark:2130968577 => [drawable:common_google_signin_btn_icon_disabled:2130968581, drawable:common_google_signin_btn_icon_dark_focused:2130968578, drawable:common_google_signin_btn_icon_dark_normal:2130968579]
+drawable:common_google_signin_btn_icon_dark_focused:2130968578 => [drawable:common_google_signin_btn_icon_dark_normal:2130968579]
+drawable:common_google_signin_btn_icon_dark_normal:2130968579 => [drawable:common_google_signin_btn_icon_dark_normal_background:2130968580, drawable:googleg_standard_color_18:2130968596]
+drawable:common_google_signin_btn_icon_disabled:2130968581 => [drawable:googleg_disabled_color_18:2130968595]
+drawable:common_google_signin_btn_icon_light:2130968582 => [drawable:common_google_signin_btn_icon_disabled:2130968581, drawable:common_google_signin_btn_icon_light_focused:2130968583, drawable:common_google_signin_btn_icon_light_normal:2130968584]
+drawable:common_google_signin_btn_icon_light_focused:2130968583 => [drawable:common_google_signin_btn_icon_light_normal:2130968584]
+drawable:common_google_signin_btn_icon_light_normal:2130968584 => [drawable:common_google_signin_btn_icon_light_normal_background:2130968585, drawable:googleg_standard_color_18:2130968596]
+drawable:common_google_signin_btn_text_dark:2130968586 => [drawable:common_google_signin_btn_text_disabled:2130968590, drawable:common_google_signin_btn_text_dark_focused:2130968587, drawable:common_google_signin_btn_text_dark_normal:2130968588]
+drawable:common_google_signin_btn_text_dark_focused:2130968587 => [drawable:common_google_signin_btn_text_dark_normal:2130968588]
+drawable:common_google_signin_btn_text_dark_normal:2130968588 => [drawable:common_google_signin_btn_text_dark_normal_background:2130968589, drawable:googleg_standard_color_18:2130968596]
+drawable:common_google_signin_btn_text_disabled:2130968590 => [drawable:googleg_disabled_color_18:2130968595]
+drawable:common_google_signin_btn_text_light:2130968591 => [drawable:common_google_signin_btn_text_disabled:2130968590, drawable:common_google_signin_btn_text_light_focused:2130968592, drawable:common_google_signin_btn_text_light_normal:2130968593]
+drawable:common_google_signin_btn_text_light_focused:2130968592 => [drawable:common_google_signin_btn_text_light_normal:2130968593]
+drawable:common_google_signin_btn_text_light_normal:2130968593 => [drawable:common_google_signin_btn_text_light_normal_background:2130968594, drawable:googleg_standard_color_18:2130968596]
+drawable:notification_action_background:2130968598 => [color:ripple_material_light:2130837517, dimen:compat_button_inset_vertical_material:2130903041, dimen:compat_button_inset_horizontal_material:2130903040, dimen:compat_control_corner_material:2130903044, dimen:compat_button_padding_vertical_material:2130903043, dimen:compat_button_padding_horizontal_material:2130903042]
+drawable:notification_bg:2130968599 => [drawable:notification_bg_normal_pressed:2130968604, drawable:notification_bg_normal:2130968603]
+drawable:notification_bg_low:2130968600 => [drawable:notification_bg_low_pressed:2130968602, drawable:notification_bg_low_normal:2130968601]
+drawable:notification_icon_background:2130968605 => [color:notification_icon_bg_color:2130837516]
+drawable:notification_tile_bg:2130968608 => [drawable:notify_panel_notification_icon_bg:2130968609]
 layout:notification_action:2131165185 => [style:Widget_Compat_NotificationActionContainer:2131361799, dimen:notification_action_icon_size:2130903047, style:Widget_Compat_NotificationActionText:2131361800]
 layout:notification_action_tombstone:2131165186 => [style:Widget_Compat_NotificationActionContainer:2131361799, dimen:notification_action_icon_size:2130903047, style:Widget_Compat_NotificationActionText:2131361800]
 layout:notification_template_custom_big:2131165187 => [dimen:notification_large_icon_height:2130903051, dimen:notification_large_icon_width:2130903052, dimen:notification_main_column_padding_top:2130903053, dimen:notification_content_margin_start:2130903050, dimen:notification_right_side_padding_top:2130903056, layout:notification_template_part_time:2131165190, layout:notification_template_part_chronometer:2131165189, style:TextAppearance_Compat_Notification_Info:2131361795, layout:notification_template_icon_group:2131165188]
 layout:notification_template_icon_group:2131165188 => [dimen:notification_large_icon_height:2130903051, dimen:notification_large_icon_width:2130903052, dimen:notification_big_circle_margin:2130903049, dimen:notification_right_icon_size:2130903055]
 layout:notification_template_part_chronometer:2131165189 => [style:TextAppearance_Compat_Notification_Time:2131361797]
 layout:notification_template_part_time:2131165190 => [style:TextAppearance_Compat_Notification_Time:2131361797]
-style:LaunchTheme:2131361792 => [drawable:launch_background:2130968576]
+style:LaunchTheme:2131361792 => [drawable:launch_background:2130968597]
 style:TextAppearance_Compat_Notification_Info:2131361795 => [style:TextAppearance_Compat_Notification:2131361794, style:TextAppearance_Compat:-1, style:TextAppearance:-1]
 style:TextAppearance_Compat_Notification_Line2:2131361796 => [style:TextAppearance_Compat_Notification_Info:2131361795]
 style:TextAppearance_Compat_Notification_Time:2131361797 => [style:TextAppearance_Compat_Notification:2131361794, style:TextAppearance_Compat:-1, style:TextAppearance:-1]
-style:Widget_Compat_NotificationActionContainer:2131361799 => [drawable:notification_action_background:2130968577]
-style:Widget_Compat_NotificationActionText:2131361800 => [color:secondary_text_default_material_light:2130837507, dimen:notification_action_text_size:2130903048]
+style:Widget_Compat_NotificationActionContainer:2131361799 => [drawable:notification_action_background:2130968598]
+style:Widget_Compat_NotificationActionText:2131361800 => [color:secondary_text_default_material_light:2130837518, dimen:notification_action_text_size:2130903048]
 
 The root reachable resources are:
-drawable:launch_background:2130968576,
+attr:imageAspectRatio:2130771982,
+   attr:imageAspectRatioAdjust:2130771983,
+   color:notification_action_color_filter:2130837515,
+   color:notification_icon_bg_color:2130837516,
+   dimen:notification_action_icon_size:2130903047,
+   dimen:notification_action_text_size:2130903048,
+   dimen:notification_big_circle_margin:2130903049,
+   dimen:notification_content_margin_start:2130903050,
+   dimen:notification_large_icon_height:2130903051,
+   dimen:notification_large_icon_width:2130903052,
+   dimen:notification_main_column_padding_top:2130903053,
+   dimen:notification_media_narrow_margin:2130903054,
+   dimen:notification_right_icon_size:2130903055,
+   dimen:notification_right_side_padding_top:2130903056,
+   dimen:notification_small_icon_background_padding:2130903057,
+   dimen:notification_small_icon_size_as_large:2130903058,
+   dimen:notification_subtext_size:2130903059,
+   dimen:notification_top_pad:2130903060,
+   dimen:notification_top_pad_large_text:2130903061,
+   drawable:common_full_open_on_phone:2130968576,
+   drawable:googleg_disabled_color_18:2130968595,
+   drawable:googleg_standard_color_18:2130968596,
+   drawable:launch_background:2130968597,
+   drawable:notification_action_background:2130968598,
+   drawable:notification_bg:2130968599,
+   drawable:notification_bg_low:2130968600,
+   drawable:notification_bg_low_normal:2130968601,
+   drawable:notification_bg_low_pressed:2130968602,
+   drawable:notification_bg_normal:2130968603,
+   drawable:notification_bg_normal_pressed:2130968604,
+   drawable:notification_icon_background:2130968605,
+   drawable:notification_template_icon_bg:2130968606,
+   drawable:notification_template_icon_low_bg:2130968607,
+   drawable:notification_tile_bg:2130968608,
    id:accessibility_action_clickable_span:2131034112,
    id:accessibility_custom_action_0:2131034113,
    id:accessibility_custom_action_1:2131034114,
@@ -590,9 +1004,46 @@ drawable:launch_background:2130968576,
    id:accessibility_custom_action_7:2131034142,
    id:accessibility_custom_action_8:2131034143,
    id:accessibility_custom_action_9:2131034144,
-   id:text:2131034175,
-   id:text2:2131034176,
+   id:dark:2131034156,
+   id:icon:2131034159,
+   id:icon_group:2131034160,
+   id:icon_only:2131034161,
+   id:light:2131034164,
+   id:none:2131034167,
+   id:notification_background:2131034169,
+   id:notification_main_column:2131034170,
+   id:notification_main_column_container:2131034171,
+   id:tag_accessibility_pane_title:2131034178,
+   id:tag_transition_group:2131034180,
+   id:tag_unhandled_key_event_manager:2131034181,
+   id:tag_unhandled_key_listeners:2131034182,
+   id:text:2131034183,
+   id:text2:2131034184,
+   id:title:2131034186,
+   integer:google_play_services_version:2131099648,
+   layout:notification_action:2131165185,
+   layout:notification_action_tombstone:2131165186,
+   layout:notification_template_custom_big:2131165187,
+   layout:notification_template_icon_group:2131165188,
+   layout:notification_template_part_chronometer:2131165189,
+   layout:notification_template_part_time:2131165190,
    mipmap:ic_launcher:2131230720,
+   string:common_google_play_services_enable_button:2131296256,
+   string:common_google_play_services_enable_text:2131296257,
+   string:common_google_play_services_enable_title:2131296258,
+   string:common_google_play_services_install_button:2131296259,
+   string:common_google_play_services_install_text:2131296260,
+   string:common_google_play_services_install_title:2131296261,
+   string:common_google_play_services_notification_channel_name:2131296262,
+   string:common_google_play_services_notification_ticker:2131296263,
+   string:common_google_play_services_unknown_issue:2131296264,
+   string:common_google_play_services_unsupported_text:2131296265,
+   string:common_google_play_services_update_button:2131296266,
+   string:common_google_play_services_update_text:2131296267,
+   string:common_google_play_services_update_title:2131296268,
+   string:common_google_play_services_updating_text:2131296269,
+   string:common_google_play_services_wear_update_text:2131296270,
+   string:common_open_on_phone:2131296271,
    style:LaunchTheme:2131361792,
    style:NormalTheme:2131361793,
    attr:android_color:-1,
@@ -615,37 +1066,37 @@ drawable:launch_background:2130968576,
    attr:android_endY:-1,
    attr:android_tileMode:-1,
    attr:android_offset:-1
-Skipped unused resource res/drawable/notification_bg.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/notification_bg_low.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/notification_icon_background.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable/notification_tile_bg.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable-v21/notification_action_background.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png: 98 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png: 107 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png: 252 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png: 247 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png: 138 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/color/common_google_signin_btn_text_dark.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/color/common_google_signin_btn_text_light.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/color/common_google_signin_btn_tint.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_icon_dark.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_icon_dark_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_icon_dark_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_icon_disabled.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_icon_light.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_icon_light_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_icon_light_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_text_dark.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_text_dark_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_text_dark_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_text_disabled.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_text_light.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_text_light_focused.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/common_google_signin_btn_text_light_normal.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 610 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 500 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 615 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 465 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 897 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 683 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 960 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 694 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 1032 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 776 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 1086 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 808 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png: 1510 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png: 1138 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png: 1638 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png: 1255 bytes (replaced with small dummy file of size 77 bytes)
 Skipped unused resource res/layout/custom_dialog.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout/notification_action.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v17/notification_action.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout/notification_action_tombstone.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v17/notification_action_tombstone.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v16/notification_template_custom_big.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v17/notification_template_custom_big.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout/notification_template_icon_group.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout/notification_template_part_chronometer.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout/notification_template_part_time.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v21/notification_action.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v21/notification_action_tombstone.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v21/notification_template_custom_big.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/layout-v21/notification_template_icon_group.xml: -1 bytes (replaced with small dummy file of size 104 bytes)

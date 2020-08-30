@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'splash_screen.dart';
 import 'package:flutter_dialogflow_v2/flutter_dialogflow.dart';
 
@@ -10,6 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Chatbot Covid',
+//      theme: ThemeData(
+//        primarySwatch: Colors.blue,
+//      ),
+//        home: MyHomePage(title: 'MyHomepage Title')
       home:SplashScreen(),
     );
   }
@@ -53,11 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   void Response(query) async {
     _textController.clear();
     AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/dialogFlow.json").build();
     Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
-    AIResponse response = await dialogFlow.detectIntent(query);
+    AIResponse response = await dialogFlow.detectIntentFromText(query);
     ChatMessage message = new ChatMessage(
       text:  response.getMessage() ??
           new CardDialogflow(response.getListMessage()[0]).title,
@@ -91,6 +98,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("COBOT", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
       ),
       body: new Column(children: <Widget>[
+        SizedBox(
+          height: 20,
+        ),
+        new Container(
+          child: Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.blue[300],
+                borderRadius: BorderRadius.circular(10)
+            ),
+            child: Text(
+              'Hi There this is Chatbot Covid-19\n                 '
+                  ' Lets try to chat', style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
         new Flexible(
             child: new ListView.builder(
               padding: new EdgeInsets.all(8.0),
@@ -107,6 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
 
 class ChatMessage extends StatelessWidget {
   ChatMessage({this.text, this.name, this.type});

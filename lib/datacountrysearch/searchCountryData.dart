@@ -76,18 +76,18 @@ class Search extends SearchDelegate{
                    child: Column(
                      children: <Widget>[
                        Text(
-                         'CONFIRMED:' +
-                             suggestionList[index]['cases'].toString(),
+                         'ACTIVE:' +
+                             suggestionList[index]['active'].toString(),
                          style: TextStyle(
                              fontWeight: FontWeight.bold,
                              color: Colors.red),
                        ),
                        Text(
-                         'ACTIVE:' +
-                             suggestionList[index]['active'].toString(),
+                         'CONFIRMED:' +
+                             suggestionList[index]['cases'].toString(),
                          style: TextStyle(
                              fontWeight: FontWeight.bold,
-                             color: Colors.blue),
+                           color: Colors.blue),
                        ),
                        Text(
                          'RECOVERED:' +

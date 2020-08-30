@@ -33,7 +33,7 @@ class _CountryPageState extends State<CountryPage> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         centerTitle: true,
-        title: Text("FIND REGION", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
+        title: Text("FIND COUNTRY", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
 
         actions: <Widget>[
           IconButton(icon: Icon(Icons.search, color: Colors.white,),
@@ -85,15 +85,15 @@ class _CountryPageState extends State<CountryPage> {
                           child: Column(
                             children: <Widget>[
                               Text(
-                                'CONFIRMED:' +
-                                    countryData[index]['cases'].toString(),
+                                'ACTIVE:' +
+                                    countryData[index]['active'].toString(),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.red),
                               ),
                               Text(
-                                'ACTIVE:' +
-                                    countryData[index]['active'].toString(),
+                                'CONFIRMED:' +
+                                    countryData[index]['cases'].toString(),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.blue),

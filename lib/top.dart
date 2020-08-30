@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'panels/worldwidepanel.dart';
+import 'data/dataDunia.dart';
 import 'datacountrysearch/countryData.dart';
-import 'panels/mosteffectedcountries.dart';
+import 'data/terdampak.dart';
 import 'package:http/http.dart' as http;
 
 class Top extends StatefulWidget {
@@ -64,7 +64,7 @@ class _Top extends State<Top> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 60),
                   child: Text(
-                    'Top Deaths By Country',
+                    'Death Cases',
                     style: TextStyle(fontSize: 18, fontFamily: 'Poppins'),
                   ),
                 ),
@@ -89,10 +89,10 @@ class _Top extends State<Top> {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Worldwide',
+                        'World Information',
                         style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                       ),
 
@@ -114,16 +114,17 @@ class _Top extends State<Top> {
                   },
                   child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: Colors.blue,
                           borderRadius: BorderRadius.circular(15)),
                       padding: EdgeInsets.all(10),
                       child: Text(
-                        'Regional Cases',
+                        'Cases By Country',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
-                      )),
+                      )
+                  ),
                 ),
 
 

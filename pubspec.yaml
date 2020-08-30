@@ -35,8 +35,9 @@ dependencies:
   shared_preferences:
   dynamic_theme:
   pie_chart:
-  http: ^0.11.3+16
+  http: ^0.11.3+17
   bubble: ^1.1.9+1
+  geolocator: ^5.1.3
 
 dev_dependencies:
   flutter_test:
@@ -58,8 +59,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/daffashafwan-7c6bc2d9633c.json
     - assets/dialogFlow.json
+    - assets/daffashafwan-7c6bc2d9633c.json
     - images/logo.png
     - images/chatbg.png
     - images/icon.png
