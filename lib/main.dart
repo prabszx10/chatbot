@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'splash_screen.dart';
-import 'package:flutter_dialogflow_v2/flutter_dialogflow.dart';
+import 'package:flutter_dialogflow/dialogflow_v2.dart';
+
 
 
 void main() => runApp(MyApp());
@@ -61,10 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // ignore: non_constant_identifier_names
   void Response(query) async {
+    print(query);
     _textController.clear();
-    AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/dialogFlow.json").build();
+    AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/services.json").build();
     Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
-    AIResponse response = await dialogFlow.detectIntentFromText(query);
+    AIResponse response = await dialogFlow.detectIntent(query);
+
     ChatMessage message = new ChatMessage(
       text:  response.getMessage() ??
           new CardDialogflow(response.getListMessage()[0]).title,
@@ -87,6 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _messages.insert(0, message);
     });
     Response(text);
+
   }
 
   @override
@@ -123,7 +127,8 @@ class _MyHomePageState extends State<MyHomePage> {
               reverse: true,
               itemBuilder: (_, int index) => _messages[index],
               itemCount: _messages.length,
-            )),
+            )
+        ),
         new Divider(height: 1.0),
         new Container(
           decoration: new BoxDecoration(color: Theme.of(context).cardColor),

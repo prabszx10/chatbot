@@ -44,9 +44,11 @@ class Search extends SearchDelegate{
            countryList.where((element) => element['country'].toString().toLowerCase().startsWith(query)).toList();
 
    return ListView.builder(
+       padding: EdgeInsets.all(10),
        itemCount: suggestionList.length,
        itemBuilder: (context,index){
      return Card(
+       color: (index%2)!=0 ?Colors.grey[200]: Colors.blue[100],
        child: Container(
          height: 100,
          padding: EdgeInsets.all(10),

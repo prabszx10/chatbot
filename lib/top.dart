@@ -92,7 +92,7 @@ class _Top extends State<Top> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'World Information',
+                        'Global Pandemic',
                         style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                       ),
 

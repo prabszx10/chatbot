@@ -21,7 +21,6 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  flutter_dialogflow_v2: ^0.1.0
   curved_navigation_bar: ^0.3.3
   flutter:
     sdk: flutter
@@ -35,9 +34,9 @@ dependencies:
   shared_preferences:
   dynamic_theme:
   pie_chart:
-  http: ^0.11.3+17
   bubble: ^1.1.9+1
   geolocator: ^5.1.3
+  flutter_dialogflow:
 
 dev_dependencies:
   flutter_test:
@@ -59,6 +58,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/services.json
     - assets/dialogFlow.json
     - assets/daffashafwan-7c6bc2d9633c.json
     - images/logo.png
