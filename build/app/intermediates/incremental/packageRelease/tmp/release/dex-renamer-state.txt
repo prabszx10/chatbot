@@ -1,0 +1,4 @@
+#Tue Sep 01 15:07:11 ICT 2020
+base.0=D\:\\test\\chatbot\\build\\app\\intermediates\\transforms\\r8\\release\\0\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

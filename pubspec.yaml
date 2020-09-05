@@ -37,6 +37,9 @@ dependencies:
   bubble: ^1.1.9+1
   geolocator: ^5.1.3
   flutter_dialogflow:
+  slide_popup_dialog:
+  http: ^0.11.3+17
+
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +61,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/service.json
     - assets/services.json
     - assets/dialogFlow.json
     - assets/daffashafwan-7c6bc2d9633c.json
@@ -67,6 +71,11 @@ flutter:
     - images/logoapp.png
     - images/back.png
     - images/send.png
+    - images/hospital.png
+    - images/phone.png
+    - images/maplogo.png
+    - images/googlelogo.png
+    - images/globe.png
   fonts:
     - family: Circular
       fonts:

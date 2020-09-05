@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'splash_screen.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
-
+import 'package:bubble/bubble.dart';
 
 
 void main() => runApp(MyApp());
@@ -12,11 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Chatbot Covid',
-//      theme: ThemeData(
-//        primarySwatch: Colors.blue,
-//      ),
-//        home: MyHomePage(title: 'MyHomepage Title')
       home:SplashScreen(),
     );
   }
@@ -64,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void Response(query) async {
     print(query);
     _textController.clear();
-    AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/services.json").build();
+    AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/service.json").build();
     Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse response = await dialogFlow.detectIntent(query);
 
@@ -99,28 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: new AppBar(
         backgroundColor: Colors.blue,
         centerTitle: true,
-        title: Text("COBOT", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
+        title: Text("COVID-19 CHATBOT", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
       ),
       body: new Column(children: <Widget>[
-        SizedBox(
-          height: 20,
-        ),
-        new Container(
-          child: Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: Colors.blue[300],
-                borderRadius: BorderRadius.circular(10)
-            ),
-            child: Text(
-              'Hi There this is Chatbot Covid-19\n                 '
-                  ' Lets try to chat', style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
         new Flexible(
             child: new ListView.builder(
               padding: new EdgeInsets.all(8.0),
@@ -159,11 +135,18 @@ class ChatMessage extends StatelessWidget {
           children: <Widget>[
             new Text(this.name,
                 style: new TextStyle(fontWeight: FontWeight.bold)),
-            new Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(20)),
-              margin: const EdgeInsets.only(top: 5.0),
-              child: new Text(text, style: TextStyle(color: Colors.white),),
+//            new Container(
+//              padding: EdgeInsets.all(10),
+//              decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+//              margin: const EdgeInsets.only(top: 5.0),
+//              child: new Text(text, style: TextStyle(color: Colors.white),),
+//            ),
+            Bubble(
+              margin: BubbleEdges.only(top: 10, right: 55),
+              alignment: Alignment.topLeft,
+              nip: BubbleNip.leftTop,
+              color: Colors.blue,
+              child: new Text(text, style: TextStyle(color: Colors.white,fontSize: 15),),
             ),
           ],
         ),
@@ -172,17 +155,25 @@ class ChatMessage extends StatelessWidget {
   }
 
   List<Widget> myMessage(context) {
+
     return <Widget>[
       new Expanded(
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             new Text(this.name, style: Theme.of(context).textTheme.subhead),
-            new Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(20)),
-              margin: const EdgeInsets.only(top: 5.0),
-              child: new Text(text, style: TextStyle(color: Colors.white),),
+//            new Container(
+//              padding: EdgeInsets.all(10),
+//              decoration: BoxDecoration(color: Colors.blueGrey, borderRadius: BorderRadius.circular(20)),
+//              margin: const EdgeInsets.only(top: 5.0),
+//              child: new Text(text, style: TextStyle(color: Colors.white),),
+//            ),
+            Bubble(
+              margin: BubbleEdges.only(top: 10,left: 55),
+              alignment: Alignment.topRight,
+              nip: BubbleNip.rightTop,
+              color: Colors.grey[500],
+              child: new Text(text, style: TextStyle(color: Colors.white, fontSize: 15),),
             ),
           ],
         ),
@@ -190,6 +181,7 @@ class ChatMessage extends StatelessWidget {
       new Container(
         margin: const EdgeInsets.only(left: 16.0),
         child: new CircleAvatar(
+          backgroundColor: Colors.grey[300],
             child: new Text(
               this.name[0],
               style: new TextStyle(fontWeight: FontWeight.bold),

@@ -1,6 +1,5 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'datasorce.dart';
 import 'homepage.dart';
 
 
@@ -10,7 +9,7 @@ class Second extends StatelessWidget {
     return DynamicTheme(
       data: (brightness) {
         return ThemeData(
-            primaryColor: primaryBlack,
+            primaryColor: Colors.black,
             fontFamily: 'Circular',
             brightness: brightness == Brightness.light
                 ? Brightness.light

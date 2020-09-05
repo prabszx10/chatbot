@@ -48,10 +48,10 @@ class Search extends SearchDelegate{
        itemCount: suggestionList.length,
        itemBuilder: (context,index){
      return Card(
-       color: (index%2)!=0 ?Colors.grey[200]: Colors.blue[100],
+       color: (index%2)!=0 ?Colors.grey[100]: Colors.blue[100],
        child: Container(
-         height: 100,
-         padding: EdgeInsets.all(10),
+         height: 90,
+//         padding: EdgeInsets.all(10),
          child: Row(
            children: <Widget>[
              Container(
@@ -75,6 +75,7 @@ class Search extends SearchDelegate{
              ),
              Expanded(
                  child: Container(
+                   padding: EdgeInsets.only(top: 10),
                    child: Column(
                      children: <Widget>[
                        Text(

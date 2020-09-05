@@ -1,4 +1,3 @@
-import 'package:chatbot/HalamanUtama.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
@@ -33,7 +32,7 @@ class _HalamannavState extends State {
 bottomNavigationBar: CurvedNavigationBar(
   height: 60,
   color: Colors.blue,
-  backgroundColor: Colors.transparent,
+  backgroundColor: Colors.white,
   items: <Widget>[
     Icon(Icons.home, color: Colors.white,),
     Icon(Icons.chat, color: Colors.white,),

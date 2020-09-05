@@ -50,7 +50,7 @@ class _Top extends State<Top> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         centerTitle: true,
-        title: Text("COBOT", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
+        title: Text("GLOBAL INFO", style: TextStyle(color: Colors.white , fontFamily: 'Poppins')),
 
       ),
       body: RefreshIndicator(
@@ -60,31 +60,36 @@ class _Top extends State<Top> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 60),
-                  child: Text(
-                    'Death Cases',
-                    style: TextStyle(fontSize: 18, fontFamily: 'Poppins'),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
                Container(
                  padding: EdgeInsets.all(10),
                  decoration: BoxDecoration(
-                     border: Border.all(color: Colors.blueAccent),
-                     borderRadius: BorderRadius.circular(20)
+                     color: Colors.grey[300],
+                     borderRadius: BorderRadius.circular(10)
                  ),
-                 child: countryData == null
-                     ? CircularProgressIndicator()
-                     : MostAffectedPanel(
-                   countryData: countryData,
+                 child: Column(
+                     children: <Widget>[
+                       Center(
+                         child: Text(
+                           'Epicentrum Cases',
+                           style: TextStyle(fontSize: 20, fontFamily: 'Poppins',color: Colors.black),
+                         ),
+                       ),
+                       SizedBox(
+                         height: 10,
+                       ),
+                         countryData == null
+                             ? CircularProgressIndicator()
+                             : epicentrumeCases(
+                           countryData: countryData,
+                         ),
+
+
+                     ]
+
                  ),
                ),
                 SizedBox(
-                  height: 20,
+                  height: 5,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
@@ -93,7 +98,7 @@ class _Top extends State<Top> {
                     children: <Widget>[
                       Text(
                         'Global Pandemic',
-                        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 17, fontFamily: 'Poppins'),
                       ),
 
                     ],
@@ -101,11 +106,11 @@ class _Top extends State<Top> {
                 ),
                 worldData == null
                     ? CircularProgressIndicator()
-                    : WorldwidePanel(
+                    : dataDunia(
                   worldData: worldData,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -113,17 +118,32 @@ class _Top extends State<Top> {
                         MaterialPageRoute(builder: (context) => CountryPage()));
                   },
                   child: Container(
+                    width: double.infinity,
                       decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(15)),
                       padding: EdgeInsets.all(10),
-                      child: Text(
-                        'Cases By Country',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      )
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              alignment: Alignment.topLeft,
+                              width: 25,
+                              height: 25,
+                              child: Image.asset("images/globe.png"),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'SHOW CASES BY COUNTRY',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                   ),
                 ),
 

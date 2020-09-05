@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MostAffectedPanel extends StatelessWidget {
+// ignore: camel_case_types
+class epicentrumeCases extends StatelessWidget {
   final List countryData;
 
-  const MostAffectedPanel({Key key, this.countryData}) : super(key: key);
+  const epicentrumeCases({Key key, this.countryData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,33 +15,55 @@ class MostAffectedPanel extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+//            height: 60,
+//            width: double.infinity,
+//            decoration: BoxDecoration(
+//                color: (index%2)!=0 ?Colors.greenAccent: Colors.white,
+//                borderRadius: BorderRadius.circular(10)
+//            ),
+
+            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
             child: Row(
               children: <Widget>[
-                Text(
-                  (index+1).toString()+'.  ',
-                  style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-                ),
-                Image.network(
-                  countryData[index]['countryInfo']['flag'],
-                  height: 25,
-                ),
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  countryData[index]['country'],
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                CircleAvatar(
+                  radius: 20,
+                  backgroundImage:
+                  NetworkImage(countryData[index]['countryInfo']['flag'],),
+                  backgroundColor: Colors.transparent,
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                Text(
-                    'Deaths: ' + countryData[index]['deaths'].toString(),
-                  style:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-                )
+               Container(
+              height: 40,
+              width: 230,
+//            width: double.infinity,
+            decoration: BoxDecoration(
+                color: Colors.blue[400],
+                borderRadius: BorderRadius.circular(10)
+            ),
+                 child: Row(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                   children: [
+                     Text(
+                       countryData[index]['country'],
+                       style:
+                     TextStyle(fontWeight: FontWeight.bold,color: Colors.white)
+                     ),
+                     SizedBox(
+                       width: 5,
+                     ),
+                     Text(
+                       ' : ' + countryData[index]['cases'].toString(),
+                         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Poppins',color: Colors.white)
+                       ,
+                     )
+                   ],
+                 ),
+               )
               ],
             ),
           );

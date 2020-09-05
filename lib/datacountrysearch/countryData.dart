@@ -53,17 +53,16 @@ class _CountryPageState extends State<CountryPage> {
               child: CircularProgressIndicator(),
             )
           : ListView.builder(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.all(10),
               itemBuilder: (context, index) {
                 return Card(
-                  color: (index%2)!=0 ?Colors.grey[200]: Colors.blue[100],
+                  color: (index%2)!=0 ?Colors.grey[100]: Colors.blue[100],
                   child: Container(
                     height: 90,
-                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                     child: Row(
                       children: <Widget>[
                         Container(
-                          width: 180,
+                          width: 200,
                           margin: EdgeInsets.symmetric(horizontal: 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
