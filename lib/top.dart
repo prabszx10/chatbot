@@ -70,12 +70,12 @@ class _Top extends State<Top> {
                      children: <Widget>[
                        Center(
                          child: Text(
-                           'Epicentrum Cases',
-                           style: TextStyle(fontSize: 20, fontFamily: 'Poppins',color: Colors.black),
+                           'Konfirmasi Kasus Terbanyak',
+                           style: TextStyle(fontSize: 18, fontFamily: 'Poppins',color: Colors.black), textAlign: TextAlign.center,
                          ),
                        ),
                        SizedBox(
-                         height: 10,
+                         height: 5,
                        ),
                          countryData == null
                              ? CircularProgressIndicator()
@@ -97,7 +97,7 @@ class _Top extends State<Top> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Global Pandemic',
+                        'Data Covid-19 Dunia',
                         style: TextStyle(fontSize: 17, fontFamily: 'Poppins'),
                       ),
 
@@ -133,10 +133,10 @@ class _Top extends State<Top> {
                               child: Image.asset("images/globe.png"),
                             ),
                             SizedBox(
-                              width: 10,
+                              width: 5,
                             ),
                             Text(
-                              'SHOW CASES BY COUNTRY',
+                              'TAMPILKAN KASUS REGIONAL',
                               style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white,

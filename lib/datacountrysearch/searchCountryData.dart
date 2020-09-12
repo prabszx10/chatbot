@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 
@@ -47,16 +46,14 @@ class Search extends SearchDelegate{
        padding: EdgeInsets.all(10),
        itemCount: suggestionList.length,
        itemBuilder: (context,index){
-     return Card(
-       color: (index%2)!=0 ?Colors.grey[100]: Colors.blue[100],
-       child: Container(
-         height: 90,
-//         padding: EdgeInsets.all(10),
+         return Card(
+             color: (index%2)!=0 ?Colors.grey[100]: Colors.blue[100],
+         child: Flexible(
+         child: Container(
+         padding: EdgeInsets.all(7),
          child: Row(
-           children: <Widget>[
+         children: <Widget>[
              Container(
-               width: 200,
-               margin: EdgeInsets.symmetric(horizontal: 10),
                child: Column(
                  crossAxisAlignment: CrossAxisAlignment.start,
                  mainAxisAlignment: MainAxisAlignment.center,
@@ -75,32 +72,32 @@ class Search extends SearchDelegate{
              ),
              Expanded(
                  child: Container(
-                   padding: EdgeInsets.only(top: 10),
                    child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.end,
                      children: <Widget>[
                        Text(
-                         'ACTIVE:' +
+                         'POSITIF:' +
                              suggestionList[index]['active'].toString(),
                          style: TextStyle(
                              fontWeight: FontWeight.bold,
                              color: Colors.red),
                        ),
                        Text(
-                         'CONFIRMED:' +
+                         'TERKONFIRMASI:' +
                              suggestionList[index]['cases'].toString(),
                          style: TextStyle(
                              fontWeight: FontWeight.bold,
                            color: Colors.blue),
                        ),
                        Text(
-                         'RECOVERED:' +
+                         'SEMBUH:' +
                              suggestionList[index]['recovered'].toString(),
                          style: TextStyle(
                              fontWeight: FontWeight.bold,
                              color: Colors.green),
                        ),
                        Text(
-                         'DEATHS:' +
+                         'MENINGGAL:' +
                              suggestionList[index]['deaths'].toString(),
                          style: TextStyle(
                              fontWeight: FontWeight.bold,
@@ -112,7 +109,7 @@ class Search extends SearchDelegate{
            ],
          ),
        ),
-     );
+     ));
    });
   }
 

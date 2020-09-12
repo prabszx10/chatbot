@@ -16,7 +16,7 @@ class dataIndonesia extends StatelessWidget {
             crossAxisCount: 2, childAspectRatio: 2),
         children: <Widget>[
           StatusPanel(
-            title: 'CONFIRMED',
+            title: 'TERKONFIRMASI',
             panelColor: Colors.blue[100],
             textColor: Colors.blue[900],
             count: indonesiaData['cases'].toString(),
@@ -28,13 +28,13 @@ class dataIndonesia extends StatelessWidget {
             count: indonesiaData['active'].toString(),
           ),
           StatusPanel(
-            title: 'RECOVERED',
+            title: 'SEMBUH',
             panelColor: Colors.green[100],
             textColor: Colors.green,
             count: indonesiaData['recovered'].toString(),
           ),
           StatusPanel(
-            title: 'DEATHS',
+            title: 'MENINGGAL',
             panelColor: Colors.grey[400],
             textColor: Colors.grey[900],
             count: indonesiaData['deaths'].toString(),

@@ -36,7 +36,7 @@ bottomNavigationBar: CurvedNavigationBar(
   items: <Widget>[
     Icon(Icons.home, color: Colors.white,),
     Icon(Icons.chat, color: Colors.white,),
-    Icon(Icons.list, color: Colors.white,),
+    Icon(Icons.flag, color: Colors.white,),
   ],
           onTap: _onItemTapped,
 ),

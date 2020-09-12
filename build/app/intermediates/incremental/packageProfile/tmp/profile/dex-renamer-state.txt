@@ -1,4 +1,0 @@
-#Fri Aug 28 14:56:50 ICT 2020
-base.0=D\:\\test\\chatbot\\build\\app\\intermediates\\dex\\profile\\mergeDexProfile\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

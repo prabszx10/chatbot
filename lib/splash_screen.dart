@@ -46,7 +46,7 @@ class StartState extends State<SplashScreen> {
             Padding(padding: EdgeInsets.only(top: 20),),
             Text(
               "Covid-19 ChatBot",
-              style: TextStyle(fontSize: 25, color: Colors.white),
+              style: TextStyle(fontSize: 25, color: Colors.white, fontFamily: 'Poppins'),
             ),
             Padding(padding: EdgeInsets.only(top: 20),),
             CircularProgressIndicator(

@@ -22,13 +22,13 @@ class updateHarian extends StatelessWidget {
             count: updateData['update']['penambahan']['jumlah_positif'].toString(),
           ),
           StatusPanel(
-            title: 'RECOVERED',
+            title: 'SEMBUH',
             panelColor: Colors.green[100],
             textColor: Colors.green,
             count: updateData['update']['penambahan']['jumlah_sembuh'].toString(),
           ),
           StatusPanel(
-            title: 'DEATHS',
+            title: 'MENINGGAL',
             panelColor: Colors.grey[400],
             textColor: Colors.grey[900],
             count:updateData['update']['penambahan']['jumlah_meninggal'].toString(),
@@ -52,7 +52,7 @@ class StatusPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
           color: panelColor,
           border: Border.all(color: Colors.blueAccent),
@@ -64,7 +64,7 @@ class StatusPanel extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 14, color: textColor),
+                fontWeight: FontWeight.bold, fontSize: 12, color: textColor),
           ),
           SizedBox(
             height: 5,

@@ -67,7 +67,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\AD
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] C:\Users\ADMIN\.gradle\caches\transforms-2\files-2.1\b6252bb7f30c7dceb20e97dfa6dfae00\core-1.2.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from D:\test\chatbot\android\app\src\main\AndroidManifest.xml:10:9-32
+		ADDED from D:\test\chatbot\android\app\src\main\AndroidManifest.xml:10:9-30
 	android:icon
 		ADDED from D:\test\chatbot\android\app\src\main\AndroidManifest.xml:11:9-43
 	android:name

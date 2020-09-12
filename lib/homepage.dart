@@ -52,7 +52,9 @@ class _HomePageState extends State<HomePage> {
 
   fetchUpdateData() async {
     http.Response response =
+//    await http.get('https://corona.lmao.ninja/v2/countries/360');
     await http.get('https://data.covid19.go.id/public/api/update.json');
+
     setState(() {
       updateData = json.decode(response.body);
     });
@@ -219,6 +221,7 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               launch("tel://"+number);
             },
+
             child: Center(
               child: (number==null)? Container():Container(
                 width: 200,
@@ -240,7 +243,7 @@ class _HomePageState extends State<HomePage> {
                         width: 10,
                       ),
                       Text(
-                        'Call Number',
+                        'Nomor Telepon',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.blue,
@@ -296,7 +299,7 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15)),
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  'Call Number',
+                  'Nomor Telepon',
                   style: TextStyle(
                       fontSize: 16,
                       color: Colors.blue,
@@ -347,7 +350,7 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       Center(
                         child: Text(
-                          'Update Covid-19 Indonesia',
+                          'Update Harian Indonesia',
                           style: TextStyle(fontSize: 18, fontFamily: 'Poppins', color: Colors.white),
                         ),
                       ),
@@ -394,23 +397,15 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 20,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Center(
+                    Center(
                         child: Text(
-                          'Nearest Covid-19 Hospital',
-                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
+                          'Rujukan Rumah Sakit Covid-19',
+                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),textAlign: TextAlign.center,
                         ),
-                      )
-                    ],
-                  ),
-                ),
+                      ),
+
                 Center(
                   child: Container(
-                    width: double.infinity,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -423,7 +418,10 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           width: 6,
                         ),
-                        (_currentAddress==null )? Text('Cannot load current position', style: TextStyle(fontWeight: FontWeight.bold),): Text(_currentAddress,style: TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                        Container(
+                          width: 220,
+                          child: (_currentAddress==null )? Text('Cannot load current position', style: TextStyle(fontWeight: FontWeight.bold),): Text(_currentAddress,style: TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                        ),
                       ],
                     ),
                   ),
@@ -439,7 +437,7 @@ class _HomePageState extends State<HomePage> {
                   itemCount: dataUser.length,
                   itemBuilder: (context, i) {
                     return _regex(dataUser[i].region.toLowerCase())==true ? Card(
-                      color: (i%2)==0 ?Colors.green[300]: Colors.blue[300],
+                      color: (i%2)==0 ?Colors.green[500]: Colors.blue[500],
                       child: new Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
@@ -473,11 +471,11 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: Center(
                       child: Container(
-                        width: 200,
+
                         decoration: BoxDecoration(
                             color: Colors.blue[400],
                             borderRadius: BorderRadius.circular(30)),
-                        padding: EdgeInsets.only(top: 10, bottom: 10),
+                        padding: EdgeInsets.all(10),
                         child: Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -492,7 +490,7 @@ class _HomePageState extends State<HomePage> {
                                 width: 10,
                               ),
                               Text(
-                                'MORE INFO',
+                                'Informasi Lengkap',
                                 style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.white,

@@ -16,7 +16,7 @@ class dataDunia extends StatelessWidget {
             crossAxisCount: 2, childAspectRatio: 2),
         children: <Widget>[
           StatusPanel(
-            title: 'CONFIRM',
+            title: 'CONFIRMED',
             panelColor: Colors.blue[100],
             textColor: Colors.blue[900],
             count: worldData['cases'].toString(),

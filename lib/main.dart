@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'splash_screen.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:bubble/bubble.dart';
@@ -12,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
       home:SplashScreen(),
     );
   }
@@ -37,10 +37,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             new Flexible(
               child: new TextField(
+                maxLines: null,
                 controller: _textController,
                 onSubmitted: _handleSubmitted,
                 decoration:
-                new InputDecoration.collapsed(hintText: "Send a message"),
+                new InputDecoration.collapsed(hintText: "Ketik Pesan.."),
               ),
             ),
             new Container(
@@ -57,7 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // ignore: non_constant_identifier_names
   void Response(query) async {
-    print(query);
     _textController.clear();
     AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/service.json").build();
     Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
@@ -76,15 +76,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _handleSubmitted(String text) {
     _textController.clear();
-    ChatMessage message = new ChatMessage(
-      text: text,
-      name: "Me",
-      type: true,
-    );
-    setState(() {
-      _messages.insert(0, message);
-    });
-    Response(text);
+    if(text.isNotEmpty&&text!=" "){
+      ChatMessage message = new ChatMessage(
+        text: text,
+        name: "Me",
+        type: true,
+      );
+      setState(() {
+        _messages.insert(0, message);
+      });
+      Response(text);
+    }
 
   }
 
@@ -135,12 +137,6 @@ class ChatMessage extends StatelessWidget {
           children: <Widget>[
             new Text(this.name,
                 style: new TextStyle(fontWeight: FontWeight.bold)),
-//            new Container(
-//              padding: EdgeInsets.all(10),
-//              decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(20)),
-//              margin: const EdgeInsets.only(top: 5.0),
-//              child: new Text(text, style: TextStyle(color: Colors.white),),
-//            ),
             Bubble(
               margin: BubbleEdges.only(top: 10, right: 55),
               alignment: Alignment.topLeft,
@@ -155,24 +151,17 @@ class ChatMessage extends StatelessWidget {
   }
 
   List<Widget> myMessage(context) {
-
     return <Widget>[
       new Expanded(
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            new Text(this.name, style: Theme.of(context).textTheme.subhead),
-//            new Container(
-//              padding: EdgeInsets.all(10),
-//              decoration: BoxDecoration(color: Colors.blueGrey, borderRadius: BorderRadius.circular(20)),
-//              margin: const EdgeInsets.only(top: 5.0),
-//              child: new Text(text, style: TextStyle(color: Colors.white),),
-//            ),
+            new Text(this.name, style: new TextStyle(fontWeight: FontWeight.bold)),
             Bubble(
               margin: BubbleEdges.only(top: 10,left: 55),
               alignment: Alignment.topRight,
               nip: BubbleNip.rightTop,
-              color: Colors.grey[500],
+              color: Colors.blueGrey,
               child: new Text(text, style: TextStyle(color: Colors.white, fontSize: 15),),
             ),
           ],
@@ -181,7 +170,7 @@ class ChatMessage extends StatelessWidget {
       new Container(
         margin: const EdgeInsets.only(left: 16.0),
         child: new CircleAvatar(
-          backgroundColor: Colors.grey[300],
+          backgroundColor: Colors.black54,
             child: new Text(
               this.name[0],
               style: new TextStyle(fontWeight: FontWeight.bold),
@@ -200,5 +189,4 @@ class ChatMessage extends StatelessWidget {
       ),
     );
   }
-
 }
